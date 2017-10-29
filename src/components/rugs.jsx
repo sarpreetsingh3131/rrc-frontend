@@ -29,7 +29,7 @@ export class Rugs extends React.Component {
         <div className='cf pa2'>
           {this.state.rugs.map((rug, index) =>
             <div key={index} className='fl w-50 w-25-m w-20-l pa2'>
-              <a className='db link grow aspect-ratio--0x0.1 tc'>
+              <a href='' className='db link grow aspect-ratio--0x0.1 tc'>
                 <img src={rug.img} className='w-100 db outline black-10' alt={rug.title} />
                 <dl className='mt2 f6 lh-copy'>
                   <dt className='clip'>Title</dt>
