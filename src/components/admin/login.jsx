@@ -46,7 +46,7 @@ export class Login extends React.Component {
   componentWillMount () {
     if (window.sessionStorage.getItem('rrcToken')) {
       PUT(VALIDATE_TOKEN_URL, {})
-        .then(_ => window.location.replace(ADMIN_URL + CATEGORIES_URL))
+        .then(_ => window.location.replace(`${process.env.PUBLIC_URL}` + ADMIN_URL + CATEGORIES_URL))
         .catch(err => console.log(err.message))
     }
   }
@@ -67,7 +67,7 @@ export class Login extends React.Component {
     .then(res => {
       window.sessionStorage.removeItem('rrcToken')
       window.sessionStorage.setItem('rrcToken', res.token)
-      window.location.replace(ADMIN_URL + CATEGORIES_URL)
+      window.location.replace(`${process.env.PUBLIC_URL}` + ADMIN_URL + CATEGORIES_URL)
     })
     .catch(err => this.setState({ message: err.message }))
   }

@@ -19,7 +19,7 @@ export class List extends React.Component {
             {this.state.products.map((product, index) =>
               <div key={index}
                 className='fl w-50 w-25-m w-30-l pa2'>
-                <a href={PRODUCTS_URL + '/' + product._id}
+                <a href={`${process.env.PUBLIC_URL}` + PRODUCTS_URL + '/' + product._id}
                   className='db link tc' >
                   <img src={HOST + product.images[0]}
                     className='w-100 db outline black-10 grow aspect-ratio--0x0.1 tc'

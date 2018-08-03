@@ -12,17 +12,17 @@ export default class App extends React.Component {
   render () {
     return (
       <div>
-        {window.location.pathname.includes('admin') ? null : <Header />}
+        {window.location.pathname.toLowerCase().includes('admin') ? null : <Header />}
         <Router>
           <Switch>
-            <Route exact path={HOME_URL} component={List} />
-            <Route exact path={CATEGORIES_URL + '/:category'} component={List} />
-            <Route exact path={PRODUCTS_URL + '/:id'} component={Product} />
-            <Route exact path={ADMIN_URL} component={Login} />
-            <Route exact path={ADMIN_URL + '/:model'} render={(props) => (
+            <Route exact path={`${process.env.PUBLIC_URL}` + HOME_URL} component={List} />
+            <Route exact path={`${process.env.PUBLIC_URL}` + CATEGORIES_URL + '/:category'} component={List} />
+            <Route exact path={`${process.env.PUBLIC_URL}` + PRODUCTS_URL + '/:id'} component={Product} />
+            <Route exact path={`${process.env.PUBLIC_URL}` + ADMIN_URL} component={Login} />
+            <Route exact path={`${process.env.PUBLIC_URL}` + ADMIN_URL + '/:model'} render={(props) => (
               window.sessionStorage.getItem('rrcToken')
               ? (<Dashboard model={props.match.params.model.toLowerCase()} />)
-              : (<Redirect to={ADMIN_URL} />)
+              : (<Redirect to={`${process.env.PUBLIC_URL}` + ADMIN_URL} />)
             )} />
           </Switch>
         </Router>

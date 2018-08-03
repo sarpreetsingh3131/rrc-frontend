@@ -36,7 +36,7 @@ export class Dashboard extends React.Component {
           <nav className='bt bb tc mw9 center mt3'>
             {MODELS.map((model, index) =>
               <a key={index} className='f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph4-l pointer'
-                href={ADMIN_URL + '/' + model.toLowerCase()} >
+                href={`${process.env.PUBLIC_URL}` + ADMIN_URL + '/' + model.toLowerCase()} >
                 {model}
               </a>
             )}
@@ -50,7 +50,7 @@ export class Dashboard extends React.Component {
   componentWillMount () {
     PUT(VALIDATE_TOKEN_URL, {})
     .then(_ => { })
-    .catch(_ => window.location.replace(ADMIN_URL))
+    .catch(_ => window.location.replace(`${process.env.PUBLIC_URL}` + ADMIN_URL))
   }
 
   componentDidMount () {
@@ -102,7 +102,7 @@ export class Dashboard extends React.Component {
 
   logout () {
     window.sessionStorage.removeItem('rrcToken')
-    window.location.replace(ADMIN_URL)
+    window.location.replace(`${process.env.PUBLIC_URL}` + ADMIN_URL)
   }
 
   content () {
