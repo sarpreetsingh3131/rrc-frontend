@@ -45,10 +45,3 @@ export class Header extends React.Component {
     )
   }
 }
-/**
- * .toLowerCase().replace(/[( )/]/g, '-')
- *   <div className='cf bg-light-black mw7 center pa1 br2-ns ba b--black-10 mt3'>
-          <input className='f6 f5-l input-reset bn fl black-80 bg-white pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns' placeholder='What are you looking for?' type='search' />
-          <input className='f6 f5-l button-reset fl pv3 tc bn bg-animate bg-black-70 hover-bg-black white pointer w-100 w-25-m w-20-l br2-ns br--right-ns' type='submit' value='Search' />
-        </div>
- */
