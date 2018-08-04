@@ -13,7 +13,7 @@ export class Header extends React.Component {
   componentWillMount () {
     Promise.all([GET(SHOP_INFO_URL), GET(CATEGORIES_URL)])
       .then(response => {
-        response['1'].splice(0, 0, { name: 'All Rugs' })
+        response['1'].splice(0, 0, { name: 'All' })
         this.setState({
           shopInfo: response['0'],
           categories: response['1']
