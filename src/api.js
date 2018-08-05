@@ -1,5 +1,5 @@
-// export const HOST = 'http://localhost:4000'
-export const HOST = 'https://46.101.233.195:4000'
+// export const HOST = 'http://localhost:3000'
+export const HOST = 'http://46.101.233.195:3000'
 
 export const CATEGORIES_URL = '/categories'
 

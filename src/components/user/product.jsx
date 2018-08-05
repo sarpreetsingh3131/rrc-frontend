@@ -25,7 +25,6 @@ export class Product extends React.Component {
   componentDidMount () {
     GET(PRODUCTS_URL + '/' + this.props.match.params.id)
       .then(product => {
-        console.log(product)
         this.setState({
           product: product,
           currentImage: product.images[0]
@@ -39,14 +38,13 @@ export class Product extends React.Component {
   }
 
   render () {
-    console.log(this.state.product)
     return (
       <main className='w-100 cf avenir dark-gray bg-white pa3 pa4-m pa8-l mw8 center'>
         <article className='b--black-10 db pv4 ph3 ph0-l no-underline black'>
           <div className='flex flex-column flex-row-ns'>
-            <div className='pr1-ns mb4 mb0-ns w-100 w-50-ns'>
+            <div className='pr1-ns mb4 mb0-ns w-100 w-40-ns'>
               <img src={HOST + this.state.currentImage}
-                className='db'
+                className='db br4'
                 alt='' />
               <div className='pa1 tc'>
                 <a className='pointer'>
@@ -60,7 +58,7 @@ export class Product extends React.Component {
                 </a>
               </div>
             </div>
-            <div className='w-100 w-50-ns pl5-ns'>
+            <div className='w-100 w-60-ns pl5-ns'>
               <h1 className='f3 fw5 avenir mt0 lh-title'>{this.state.product.name}</h1>
               <p className='f5 f5-l lh-copy'>{this.state.product.description}</p>
               <article className='bg-light-gray pa2 pa2-ns avenir' data-name='slab-stat-small'>
@@ -68,8 +66,8 @@ export class Product extends React.Component {
                   {this.properties.map((property, index) =>
                     <dl key={index}
                       className='fl fn-l w-50 dib-l w-auto-l lh-title mr5-l'>
-                      <dd className='f5 fw4 ml0'>{property}</dd>
-                      <dd className='f5 fw5 ml0'>{this.propertyValue(property.toLowerCase())}</dd>
+                      <dd className='f5 b fw5 ml0'>{property}</dd>
+                      <dd className='f5 f5-l lh-copy ml0'>{this.propertyValue(property.toLowerCase())}</dd>
                     </dl>
                   )}
                 </div>

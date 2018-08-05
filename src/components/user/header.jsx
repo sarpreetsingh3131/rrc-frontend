@@ -29,7 +29,7 @@ export class Header extends React.Component {
           <h1 className='mt2 mb0 baskerville i fw1 f1'>{this.state.shopInfo.name}</h1>
         </a>
         <h2 className='mt2 mb0 f6 fw4 ttu tracked'>{this.state.shopInfo.address}</h2>
-        <h2 className='mt2 mb0 f6 fw4 ttu tracked'>{[this.state.shopInfo.phones].toString().split(',').join(',  ')}</h2>
+        <h2 className='mt2 mb0 f6 fw4 ttu tracked'>{[this.state.shopInfo.phones].toString().split(',').join(', ')}</h2>
         <h2 className='mt2 mb0 f6 fw4 tracked'>{this.state.shopInfo.email}</h2>
         <nav className='bt bb tc mw8 center mt3'>
           {this.state.categories.map((category, index) =>
