@@ -28,7 +28,7 @@ export class Dashboard extends React.Component {
     return (
       <div>
         <header className='bg-white black-80 tc pv1 avenir'>
-          <h1 className='fw5 f2 f2-ns lh-title mt0 mb3 mt2'>Rotorua Rug Co. (Admin)</h1>
+          <h1 className='fw5 f2 f2-ns lh-title mt0 mb3 mt2'>Rotorua Rug Company (Admin)</h1>
           <a className='f5 grow br-pill ba bw1 ph3 pv2 mb2 dib pointer'
             onClick={this.logout.bind(this)}>
               Log Out
@@ -121,7 +121,7 @@ export class Dashboard extends React.Component {
 
   table () {
     return (
-      <div className='pa4 avenir'>
+      <div className='pa3 avenir'>
         <div className='overflow-auto'>
           <table className='f5 w-100 mw8 center'
             cellSpacing='0'>

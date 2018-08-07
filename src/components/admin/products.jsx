@@ -204,7 +204,7 @@ export class Products extends React.Component {
     let property = this.state.product[label]
     if (property) {
       switch (label) {
-        case 'size': return property.length + ' x ' + property.width
+        case 'size': return property.length + ' x ' + property.width + ' ' + property.unit
         default: return property.name
       }
     }
@@ -226,7 +226,7 @@ export class Products extends React.Component {
                 ? null : property.items[e.target.selectedIndex - 1])}>
                 <option>NA</option>
                 {property.items.map((item, index) =>
-                  <option key={index}>{item.name || (item.length + ' x ' + item.width)}</option>
+                  <option key={index}>{item.name || (item.length + ' x ' + item.width + ' ' + item.unit)}</option>
                 )}
               </select>
             </dd>
@@ -266,7 +266,7 @@ export class Products extends React.Component {
           <textarea className='db border-box hover-black w-100 ba b--black-20 pa2 br2 h4 mb2'
             value={this.state.product.description}
             onChange={e => this.handleProperty('description', e.target.value)} />
-          <label className='f6 db mb2'>Images</label>
+          <label className='f6 db mb2'>Images (optional)</label>
           <input type='file'
             accept='image/*'
             onChange={e => this.handleImageUpload(e.target.files[0])} />

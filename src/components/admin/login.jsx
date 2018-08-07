@@ -15,7 +15,7 @@ export class Login extends React.Component {
   render () {
     return (
       <article className='avenir mw6 center ph3 ph5-ns tc br2 pv6 mb5'>
-        <h1 className='fw5 f2 f2-ns lh-title mt0 mb3'>Rotorua Rug Co. (Admin)</h1>
+        <h1 className='fw5 f2 f2-ns lh-title mt0 mb3'>Rotorua Rug Company (Admin)</h1>
         <div className='mt3'>
           <label className='db lh-copy f5 tl'>Username</label>
           <input className='pa2 input-reset ba bg-transparent w-100'

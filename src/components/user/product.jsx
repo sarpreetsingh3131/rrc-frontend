@@ -82,7 +82,7 @@ export class Product extends React.Component {
   propertyValue (property) {
     switch (property) {
       case 'size': return this.state.product.size
-        ? this.state.product.size.length + ' x ' + this.state.product.size.width
+        ? this.state.product.size.length + ' x ' + this.state.product.size.width + ' ' + this.state.product.size.unit
         : 'NA'
       case 'price': return '$' + this.state.product.price
       case 'views': return this.state.product.views

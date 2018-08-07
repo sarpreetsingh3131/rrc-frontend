@@ -1,5 +1,5 @@
-// export const HOST = 'http://localhost:3000'
-export const HOST = 'http://46.101.233.195:3000'
+// export const HOST = 'http://167.99.74.162'
+export const HOST = 'https://www.rotoruarugcompany.com'
 
 export const CATEGORIES_URL = '/categories'
 
